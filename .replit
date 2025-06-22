@@ -1,0 +1,16 @@
+entrypoint = "main.py"
+modules = ["python-3.11"]
+
+[nix]
+channel = "stable-24_05"
+packages = ["alsa-lib", "at-spi2-atk", "atk", "cairo", "cups", "dbus", "gitFull", "glib", "libdrm", "libxkbcommon", "mesa", "nspr", "nss", "pango", "playwright-driver", "playwright-test", "xorg.libXcomposite", "xorg.libXdamage", "xorg.libXfixes", "xorg.libxcb"]
+
+[unitTest]
+language = "python3"
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix"]
+
+[deployment]
+run = ["python3", "main.py"]
+deploymentTarget = "cloudrun"
